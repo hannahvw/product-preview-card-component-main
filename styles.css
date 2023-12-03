@@ -24,3 +24,27 @@ html {
   font-family: "Fraunces", serif;
   font-family: "Montserrat", sans-serif;
 }
+
+body {
+  background-color: var(--primary-color-light);
+}
+
+.card {
+  margin: 25vh auto 1rem;
+  max-width: 55vw;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+.desktop-img {
+  display: block;
+  border-radius: 10px 0 0 10px;
+  max-width: 27vw;
+}
+
+.card-content {
+  background-color: var(--neutral-color-white);
+  border-radius: 0 10px 10px 0;
+}
