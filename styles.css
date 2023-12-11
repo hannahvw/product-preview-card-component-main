@@ -13,11 +13,99 @@
 }
 
 :root {
-  --primary-color-dark: hsl(158, 36%, 37%);
-  --primary-color-light: hsl(30, 38%, 92%);
-  --neutral-color-very-dark: hsl(212, 21%, 14%);
-  --neutral-color-dark: hsl(228, 12%, 48%);
-  --neutral-color-white: hsl(0, 0%, 100%);
+  --primary-color-400: hsl(158, 36%, 37%);
+  --primary-color-700: hsl(158, 36%, 20%);
+  --primary-color-200: hsl(30, 38%, 92%);
 
-  --serif-font: "Fraunces", serif;
-  --sans-serif-font: "Montserrat", sans-serif;
+  --neutral-color-900: hsl(212, 21%, 14%);
+  --neutral-color-600: hsl(228, 12%, 48%);
+  --neutral-color-100: hsl(0, 0%, 100%);
+
+  --ff-serif: "Fraunces", serif;
+  --ff-sans-serif: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color-200);
+}
+
+.product {
+  background-color: var(--neutral-color-100);
+  margin: 1.2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product__text {
+  padding: 1.3rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin-bottom: -0.75rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: var(--ff-serif);
+  line-height: 2rem;
+  font-size: 2rem;
+  color: var(--neutral-color-900);
+}
+
+p {
+  font-family: var(--ff-sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-color-600);
+  line-height: 1.4rem;
+}
+
+.product__price {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.current-price {
+  font-size: 2rem;
+  color: var(--primary-color-400);
+  font-family: var(--ff-serif);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--neutral-color-600);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--primary-color-400);
+  color: var(--neutral-color-100);
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-family: var(--ff-sans-serif);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button::before {
+  content: url(images/icon-cart.svg);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-700);
+}
